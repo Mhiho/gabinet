@@ -9,6 +9,8 @@
     "react-canvas-component": "^0.1.5",
     "react-dom": "^16.4.0",
     "react-konva": "^1.7.6",
+    "react-navigation": "^2.5.5",
+    "react-p5-wrapper": "0.0.4",
     "react-paint": "^1.0.1",
     "react-scripts": "1.1.4",
     "uuid": "^3.2.1"
