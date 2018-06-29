@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import './App.css';
 import {List,Map} from 'immutable';
-import road from './assets/images/road.jpg';
 import Picture from './components/picture/picture';
+import Navigation from './containers/navigation/navigation';
 
 class App extends Component {
   constructor() {
@@ -12,7 +12,8 @@ class App extends Component {
 
   render(){
     return (
-        <div>
+        <div className="App">
+          <Navigation />
           <Picture />
         </div>
     )

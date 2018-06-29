@@ -1,0 +1,25 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100px;
+    background: #330000;
+
+}
+li {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 250px;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 80px;
+  cursor: pointer;
+}
+li:hover {
+  background: white;
+  color: #330000;
+}

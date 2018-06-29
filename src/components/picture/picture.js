@@ -1,7 +1,7 @@
 import P5Wrapper from 'react-p5-wrapper';
 import React, {Component} from 'react';
 import road from '../../assets/images/road.jpg';
-
+import './picture.css';
 
 class Picture extends Component {
   sketch(p) {
@@ -983,7 +983,7 @@ class Picture extends Component {
   }
   render(){
     return(
-      <div>
+      <div className="Picture">
           <P5Wrapper sketch={this.sketch} />
       </div>
     )

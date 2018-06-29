@@ -1,15 +1,26 @@
 import React, {Component} from 'react';
-import { createStackNavigator } from 'react-navigation';
+import './navigation.css';
 
 class Navigation extends Component {
 
 render(){
   return(
-    <div>
-
-    </div>
+    <nav>
+      <div>
+        <div>
+          <ul>
+            <li>O mnie</li>
+            <li>Pomoc psychologiczna</li>
+            <li>Cennik</li>
+            <li>Kontakt</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   )
 }
 
 
 }
+
+export default Navigation;
