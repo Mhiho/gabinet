@@ -1,17 +1,10 @@
 import React, {Component} from 'react';
 import './navigation.css';
+import {connect} from 'react-redux';
+import _ from 'lodash';
 
 class Navigation extends Component {
 
-state = {
-  aboutShow: false,
-  content: ["Nazywam się Sylwia Wesołowska-Komar. Ukończyłam studia na Uniwersytecie Śląskim na kierunku psychologia poznawcza.",
-            "Moje sesje maja swoje korzenie w psychoterapii dynamicznej. Uważam, że jest to najlepsza możliwa metoda poradzenia sobie z problemami psychicznymi."]
-}
-
-toggleState(){
-  this.setState({aboutShow: !this.state.aboutShow})
-}
 
 componentDidUpdate(){}
 render(){
@@ -20,16 +13,19 @@ render(){
       <div>
         <div>
           <ul>
-            <li onClick={()=>this.toggleState()}>O mnie</li>
+            <li onClick={ this.props.aboutMe }>O mnie</li>
 
             <li>Pomoc psychologiczna</li>
             <li>Cennik</li>
             <li>Kontakt</li>
           </ul>
 
-          { this.state.aboutShow ?
-          this.state.content.map(text=>
-          (<div className="aboutMe">{text}</div>)
+          { this.props.aboutShow ?
+          this.props.content.map((text,index)=>
+          <div className="aboutMe"
+            key={index}>
+          {text}
+          </div>
         ) : null
           }
         </div>
@@ -37,8 +33,19 @@ render(){
     </nav>
   )
 }
-
-
 }
 
-export default Navigation;
+function mapStateToProps(state) {
+  return{
+    content: state.content,
+    aboutShow: state.aboutShow
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return{
+    aboutMe: ()=> dispatch({type: 'ABOUT_ME'})
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Navigation);

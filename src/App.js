@@ -3,6 +3,7 @@ import './App.css';
 import {List,Map} from 'immutable';
 import Picture from './components/picture/picture';
 import Navigation from './containers/navigation/navigation';
+import Footer from './containers/footer/footer';
 
 class App extends Component {
   constructor() {
@@ -15,6 +16,7 @@ class App extends Component {
         <div className="App">
           <Navigation />
           <Picture />
+          <Footer />
         </div>
     )
   }
