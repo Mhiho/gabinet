@@ -4,6 +4,8 @@ import {List,Map} from 'immutable';
 import Picture from './components/picture/picture';
 import Navigation from './containers/navigation/navigation';
 import Footer from './containers/footer/footer';
+import {connect} from 'react-redux';
+import Content from './containers/Content/Content';
 
 class App extends Component {
   constructor() {
@@ -15,7 +17,12 @@ class App extends Component {
     return (
         <div className="App">
           <Navigation />
-          <Picture />
+          <div>
+            <Content />
+          </div>
+          <div>
+            <Picture />
+          </div>
           <Footer />
         </div>
     )
@@ -23,7 +30,11 @@ class App extends Component {
 
 }
 
+function mapStateToProps(state){
+  return{
+    aboutShow: state.aboutShow
+  }
+}
 
 
-
-export default App;
+export default connect(mapStateToProps,null)(App);

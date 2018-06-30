@@ -18,22 +18,27 @@ li {
   font-weight: bold;
   line-height: 80px;
   cursor: pointer;
+  text-align: center;
 }
-@keyframes hov {
+/*@keyframes hov {
   0% {background: #330000;
       color: white;}
   100% {background: white;
       color: #330000;}
-}
+}*/
 li:hover {
-  animation: hov 0.8s ease;
+  /*animation: hov 0.8s ease;*/
+  background: white;
+  color: #330000;
 }
-
+.active {
+  background: white;
+  color: #330000;
+}
 
 .aboutMe {
   position: relative;
   top: 200px;
   font-size: 2em;
   text-align: justify;
-
 }

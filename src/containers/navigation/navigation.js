@@ -1,10 +1,19 @@
 import React, {Component} from 'react';
 import './navigation.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import {connect} from 'react-redux';
 import _ from 'lodash';
 
 class Navigation extends Component {
 
+
+state = {
+  active: 'active'
+}
+
+toggleActive(){
+  this.setState({active: !this.state.active})
+}
 
 componentDidUpdate(){}
 render(){
@@ -13,21 +22,12 @@ render(){
       <div>
         <div>
           <ul>
-            <li onClick={ this.props.aboutMe }>O mnie</li>
-
-            <li>Pomoc psychologiczna</li>
+            <li className={this.props.activeforAbo} onClick={this.props.aboutMe }>O mnie</li>
+            <li className={this.props.activeforAct} >Aktualności</li>
+            <li className={this.props.activeforHel} onClick={this.props.help }>Pomoc psychologiczna</li>
             <li>Cennik</li>
             <li>Kontakt</li>
           </ul>
-
-          { this.props.aboutShow ?
-          this.props.content.map((text,index)=>
-          <div className="aboutMe"
-            key={index}>
-          {text}
-          </div>
-        ) : null
-          }
         </div>
       </div>
     </nav>
@@ -37,14 +37,16 @@ render(){
 
 function mapStateToProps(state) {
   return{
-    content: state.content,
-    aboutShow: state.aboutShow
+    activeforAct: state.activeforAct,
+    activeforAbo: state.activeforAbo,
+    activeforHel: state.activeforHel
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return{
-    aboutMe: ()=> dispatch({type: 'ABOUT_ME'})
+    aboutMe: ()=> dispatch({type: 'ABOUT_ME'}),
+    help: () => dispatch({type: 'PSYCHOLOGICAL_HELP'})
   }
 }
 
