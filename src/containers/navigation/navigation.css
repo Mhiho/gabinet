@@ -19,7 +19,21 @@ li {
   line-height: 80px;
   cursor: pointer;
 }
+@keyframes hov {
+  0% {background: #330000;
+      color: white;}
+  100% {background: white;
+      color: #330000;}
+}
 li:hover {
-  background: white;
-  color: #330000;
+  animation: hov 0.8s ease;
+}
+
+
+.aboutMe {
+  position: relative;
+  top: 200px;
+  font-size: 2em;
+  text-align: justify;
+
 }
