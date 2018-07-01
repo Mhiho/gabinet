@@ -1,9 +1,12 @@
 .Content {
   font-size: 2em;
-  text-align: justify;
-  justify-content: flex-start;
-  display: flex;
+
   padding-top: 200px;
   margin-left: 100px;
   margin-right: 50px;
+}
+
+.paragraf {
+  margin-bottom: 50px;
+  flex-direction: row;
 }

@@ -6,7 +6,7 @@ class Footer extends Component {
   render(){
     return (
       <div className="footer">
-        <a className="signature" href="https://github.com/Mhiho">Created by Mhiho.</a>
+        Created by <a className="signature" href="https://github.com/Mhiho">Mhiho</a>
       </div>
     )
   }

@@ -6,15 +6,6 @@ import _ from 'lodash';
 
 class Navigation extends Component {
 
-
-state = {
-  active: 'active'
-}
-
-toggleActive(){
-  this.setState({active: !this.state.active})
-}
-
 componentDidUpdate(){}
 render(){
   return(
@@ -23,10 +14,10 @@ render(){
         <div>
           <ul>
             <li className={this.props.activeforAbo} onClick={this.props.aboutMe }>O mnie</li>
-            <li className={this.props.activeforAct} >Aktualności</li>
+            <li className={this.props.activeforAct} onClick={this.props.actualities}>Aktualności</li>
             <li className={this.props.activeforHel} onClick={this.props.help }>Pomoc psychologiczna</li>
-            <li>Cennik</li>
-            <li>Kontakt</li>
+            <li className={this.props.activeforPri} onClick={this.props.prices}>Cennik</li>
+            <li className={this.props.activeforCon} onClick={this.props.contact}>Kontakt</li>
           </ul>
         </div>
       </div>
@@ -39,14 +30,19 @@ function mapStateToProps(state) {
   return{
     activeforAct: state.activeforAct,
     activeforAbo: state.activeforAbo,
-    activeforHel: state.activeforHel
+    activeforHel: state.activeforHel,
+    activeforPri: state.activeforPri,
+    activeforCon: state.activeforCon
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return{
     aboutMe: ()=> dispatch({type: 'ABOUT_ME'}),
-    help: () => dispatch({type: 'PSYCHOLOGICAL_HELP'})
+    help: () => dispatch({type: 'PSYCHOLOGICAL_HELP'}),
+    prices: () => dispatch({type: 'PRICES'}),
+    contact: () => dispatch({type: 'CONTACT'}),
+    actualities: () => dispatch({type: 'ACTUALITIES'})
   }
 }
 

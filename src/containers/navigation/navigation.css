@@ -6,13 +6,13 @@ ul {
     position: fixed;
     width: 100vw;
     height: 100px;
-    background: #330000;
+    background: #7a8aa3;
 
 }
 li {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #f0f2f5;
   width: 250px;
   font-size: 1.5em;
   font-weight: bold;
@@ -28,12 +28,12 @@ li {
 }*/
 li:hover {
   /*animation: hov 0.8s ease;*/
-  background: white;
-  color: #330000;
+  background: #f0f2f5;
+  color: #a5afc0;
 }
 .active {
-  background: white;
-  color: #330000;
+  background: #f0f2f5;
+  color: #a5afc0;
 }
 
 .aboutMe {

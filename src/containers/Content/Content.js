@@ -10,10 +10,10 @@ class Content extends Component {
     return(
       <div className="Content">
       {
-      this.props.content.map((text,index)=>
-      <div key={index}>
+      this.props.content.map((text,index)=>(
+      <div className="paragraf" key={index}>
         {text}
-      </div>)
+      </div>))
     }
     </div>
     )
