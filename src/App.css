@@ -1,7 +1,7 @@
 .App {
   background-image: url('./assets/images/bgd-tile.jpg');
   width: 100vw;
-  min-height: 100vh;
   font-family: 'Lato', sans-serif;
   display: flex;
+  box-sizing: border-box;
 }

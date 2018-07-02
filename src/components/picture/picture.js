@@ -25,7 +25,7 @@ class Picture extends Component {
     // The maximum number of invalid traces allowed for the smaller brush size before the painting is stopped
     var maxInvalidTracesForSmallerSize = 350;
     // The trace speed
-    var traceSpeed = 3;
+    var traceSpeed = 2;
     // The typical trace length, relative to the brush size
     var relativeTraceLength = 2.3;
     // The minimum trace length allowed

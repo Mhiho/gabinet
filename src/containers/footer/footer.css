@@ -4,10 +4,9 @@
   width: 100vw;
   height: 40px;
   color: white;
-  position: fixed;
-  top: 95vh;
   font-size: 1.5em;
   line-height: 40px;
+  display: flex;
 }
 .signature {
   text-decoration: none;
@@ -15,4 +14,6 @@
 }
 .signature:hover{
   text-decoration: none;
+  color: lawngreen;
+
 }

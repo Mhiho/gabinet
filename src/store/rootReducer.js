@@ -1,7 +1,10 @@
 import {combineReducers} from 'redux';
 
 const initState = {
-  content: ["Psychoterapia to wciąż temat tabu. Ludzie obawiają się na nią wybrać, by nie uznano ich za chorych psychicznie. Nie wierzą też, że specjalista może pomóc im rozwiązać problemy. Tymczasem coraz więcej osób cierpi na zaburzenia lękowe, depresję czy zespół stresu pourazowego."],
+  content: ["Psychoterapia to wciąż temat tabu. Ludzie obawiają się na nią wybrać, by nie uznano ich za chorych psychicznie. Nie wierzą też, że specjalista może pomóc im rozwiązać problemy. Tymczasem coraz więcej osób cierpi na zaburzenia lękowe, depresję czy zespół stresu pourazowego.",
+            "Według Renaty Składanek z PARI Gabinet Psychoterapii, w Polsce wciąż panuje opinia, że terapii wymagają przede wszystkim osoby nieporadne życiowo, dla których kolejnym krokiem będzie wizyta w szpitalu psychiatrycznym. Drugim powszechnym poglądem jest brak wiary w to, iż specjalista jest w stanie wyeliminować ich problemy lub im zapobiec.",
+            "- Część osób uważa, że psycholog to człowiek z tymi samymi problemami, z którymi oni sami się borykają. W związku z tym poddają w wątpliwość, czy jest im w stanie pomóc, skoro zapewne nie umie poradzić sobie z własnymi kłopotami. Wychodzą z założenia, że rozmowa z nim nic im nie da - mówi Składanek.",
+            "Jednak panujące stereotypy, czy też niewiara w możliwość uzyskania pomocy od psychoterapeuty, to nie jedyne powody braku chęci do odwiedzenia gabinetów psychoterapeutów. Osoba, która przechodzi trudny czas, bardzo często nie chce przyznać się przed samym sobą, że w jej życiu nie dzieje się najlepiej. Nie wie też, na czym polega terapia i jak przebiega. Wydaje się jej, że jest to typowe spotkanie z lekarzem, który jedynie wystawi niepokojącą diagnozę."],
   activeforAct: 'active',
   activeforAbo: '',
   activeforHel: '',
@@ -59,9 +62,6 @@ function rootReducer(state = initState, action) {
       activeforCon: 'active'
     }
     case 'ACTUALITIES':
-    const backtoInitial = {
-      content: ["Psychoterapia to wciąż temat tabu. Ludzie obawiają się na nią wybrać, by nie uznano ich za chorych psychicznie. Nie wierzą też, że specjalista może pomóc im rozwiązać problemy. Tymczasem coraz więcej osób cierpi na zaburzenia lękowe, depresję czy zespół stresu pourazowego."]
-      };
     return{
       ...state, content: [...initState.content],
       activeforAct: 'active',

@@ -1,12 +1,19 @@
 .Content {
   font-size: 2em;
-
-  padding-top: 200px;
+  margin-top: 200px;
   margin-left: 100px;
   margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: 15px solid silver;
+  outline: 5px solid #495669;
+  background: #e1e4ea;
 }
 
 .paragraf {
-  margin-bottom: 50px;
-  flex-direction: row;
+  padding: 0 0 0 5px;
+  margin-bottom: 40px;
+  width: 100%;
+
 }
